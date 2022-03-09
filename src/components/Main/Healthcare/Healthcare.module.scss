@@ -1,0 +1,130 @@
+@import "src/sass/style";
+
+.Healthcare__container {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  margin: 100px auto 0;
+  @include media-break(max, $mobile) {
+    margin: 100px auto 0;
+    width: 80%;
+  }
+
+  .textBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: center;
+
+
+    .title {
+      max-width: 760px;
+      text-align: center;
+      font-family: Rubik;
+      font-weight: bold;
+      font-size: rem(44);
+      line-height: 126%;
+
+      span {
+        color: #EC5863;
+      }
+    }
+
+    .text {
+      max-width: 600px;
+      font-family: Rubik;
+      font-weight: normal;
+      font-size: rem(12);
+      line-height: 138.5%;
+      text-align: center;
+      letter-spacing: 0.08em;
+      color: #616161;
+    }
+  }
+
+  .cards_cont {
+    display: flex;
+    column-gap: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      max-width: 280px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 26px;
+      background-color: white;
+      border-radius: 15px;
+
+      .square1,
+      .square2,
+      .square3,
+      .square4 {
+        position: absolute;
+        background-color: #EC5863;
+        border-radius: 15px;
+        z-index: -1;
+      }
+
+      .square1 {
+        top: 80%;
+        left: -20px;
+        transform: rotate(45deg);
+        width: 65px;
+        height: 65px;
+      }
+
+      .square2 {
+        top: 10%;
+        left: 85%;
+        transform: rotate(30deg);
+        width: 95px;
+        height: 95px;
+      }
+
+      .square3 {
+        top: 60%;
+        left: 75%;
+        transform: rotate(-30deg);
+        width: 125px;
+        height: 125px;
+      }
+
+      .square4 {
+        top: -25px;
+        left: 90%;
+        transform: rotate(-45deg);
+        width: 65px;
+        height: 65px;
+      }
+
+
+      img {
+        width: 65px;
+        margin-bottom: 55px;
+      }
+
+      h1 {
+        font-family: Rubik;
+        font-weight: bold;
+        font-size: rem(16);
+        line-height: 138.5%;
+        text-align: center;
+        letter-spacing: 0.08em;
+        margin-bottom: 4px;
+      }
+
+      h2 {
+        font-family: Rubik;
+        font-weight: normal;
+        font-size: rem(12);
+        line-height: 138.5%;
+        text-align: center;
+        letter-spacing: 0.08em;
+      }
+    }
+  }
+
+}

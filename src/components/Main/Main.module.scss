@@ -1,0 +1,8 @@
+@import "src/sass/style";
+
+main {
+  display: flex;
+  flex-direction: column;
+  @include adaptiveValue('padding-top', 150, 100);
+
+}

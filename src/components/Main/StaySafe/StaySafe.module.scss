@@ -1,0 +1,77 @@
+@import "src/sass/style";
+
+.StaySafe__container {
+  display: flex;
+  align-items: center;
+  padding: 79px 0 0;
+  gap: 150px;
+  min-height: 100%;
+
+  .doctors {
+    margin: 0 0 0 0;
+    @include adaptiveValue('margin-left', 40, 20);
+  }
+
+  .textContent {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-family: Rubik;
+      font-weight: bold;
+      font-size: rem(44);
+      line-height: 126%;
+
+      span {
+        color: #EC5863;
+      }
+    }
+
+    .text {
+      font-family: Rubik;
+      font-weight: normal;
+      font-size: rem(12);
+      line-height: 138.5%;
+      letter-spacing: 0.08em;
+      margin: 12px 0 24px;
+    }
+
+    .features {
+      font-family: Raleway;
+      font-weight: 800;
+      font-size: rem(12);
+      line-height: 12px;
+      letter-spacing: 0.14em;
+      background-color: #EC5863;
+      border-radius: 5px;
+      max-width: 150px;
+      padding: 14px 30px;
+      color: white;
+    }
+  }
+
+  @include media-break(max, $pc) {
+    @include adaptiveValue('gap', 80, 20)
+
+  }
+  @include media-break(max, $mobile) {
+    flex-direction: column;
+    padding: 0 15%;
+    max-width: 80% !important;
+    .doctors {
+      margin: 0;
+    }
+  }
+  @include media-break(max, $mobileSmall) {
+    flex-direction: column;
+    padding: 0 30px;
+    max-width: 100%;
+
+    .doctors {
+      margin: 0;
+    }
+    .textContent {
+    }
+  }
+}
